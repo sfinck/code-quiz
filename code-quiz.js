@@ -1,5 +1,9 @@
 var startBtn = document.getElementById("startBtn");
 var questionElement = document.getElementById("questionLine");
+//Global variable that tracks user score 
+var score = 0;
+//Global variable that tracks what question the user is on 
+var questionNumber = 0;
 
 //Created array of question objects 
 var questions = [ 
@@ -36,18 +40,27 @@ answer: "(a) CSS"
 ]
 
 //Start Quiz
-startBtn.addEventListener("click", function(){
-    // call genQuiz
+startBtn.addEventListener("click", function() {
+return genQuiz
 });
 
-// global variable that tracks qhich question the user is on
-var questionNumber = 0;
 // write code that increments this number on the event listener for the choice buttons
 
-function genQuiz(){
-    questionElement.innerText = array[questionNumber].question;
-    // do same thing for choices
-    // .innerTxt = array[0].choices[0]
-  }
 
-//
+function genQuiz(){
+    questionElement.innerText = array[questions].question;
+    questionElement.innerText = array[0].choices[0]
+
+
+    for(var i=0; i < questions.length; i++){
+    var response = questionLine(questions.i.innerText); 
+    if( response == questions[i].answer){
+      score++;
+      alert("Correct!");
+    } 
+    else {
+      alert("WRONG!");
+    }
+  }
+}
+  alert("you got" + score + "/" + questions.length)
