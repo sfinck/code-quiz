@@ -1,6 +1,10 @@
 var startBtn = document.getElementById("startBtn");
 var questionElement = document.getElementById("questionLine");
 var choicesElement = document.getElementById("choices");
+var choiceA = document.getElementById("choiceA")
+var choiceB = document.getElementById("choiceB")
+var choiceC = document.getElementById("choiceC")
+var choiceD = document.getElementById("choiceD")
 var messageElement = document.getElementById("message");
 
 //Created array of question objects 
@@ -47,36 +51,43 @@ startBtn.addEventListener("click", function() {
 genQuiz();
 });
 
-// write code that increments this number on the event listener for the choice buttons
-
 function genQuiz(){
+    choicesElement.style.display = "block";
     questionElement.innerText = questions[questionNumber].question;
 
-    for(var i=0; i < questions[questionNumber].choices.length; i++){
-      var button=document.createElement("button");
-      button.innerText=questions[questionNumber].choices[i];
-      button.setAttribute("data-index",i);
-      choicesElement.appendChild(button);
-    }
-
-choicesElement.addEventListener("click", function(event) {
-event.preventDefault();
-var userChoice = event.target.getAttribute("data-index");
-checkAnswer(userChoice);
-questionNumber++;
-for(var i=0; i < questions[questionNumber].choices.length; i++){
-button.innerText=questions[questionNumber].choices[i]; 
-}  
-})
+    choiceA.innerText = questions[0].choices[0];
+    choiceB.innerText = questions[0].choices[1];
+    choiceC.innerText = questions[0].choices[2];
+    choiceD.innerText = questions[0].choices[3];
 }
 
 function checkAnswer(userChoice){
-var correctAnswer = questions[questionNumber].answer;
-if (userChoice === correctAnswer){
-  score++;
-  messageElement.innerText="You are correct!"
-}
-else {
-  //insert timer here 
-}
-}
+  var correctAnswer = questions[questionNumber].answer;
+  if (userChoice === correctAnswer){
+    score++;
+    messageElement.innerText="You are correct!"
+  }
+  else {
+    //insert timer here 
+  }
+  }
+
+choicesElement.addEventListener("click", function(event) {
+  event.preventDefault();
+  var userChoice = event.target.getAttribute("data-index");
+  checkAnswer(userChoice);
+  questionNumber++;
+
+  questionElement.innerText = questions[questionNumber].question;
+
+  choiceA.innerText = questions[questionNumber].choices[0];
+  choiceB.innerText = questions[questionNumber].choices[1];
+  choiceC.innerText = questions[questionNumber].choices[2];
+
+  if (questions[questionNumber].choices.length >=4) {
+    choiceD.innerText = questions[questionNumber].choices[3];
+  } else {
+    choiceD.style.display = "none";
+  }
+}); 
+
