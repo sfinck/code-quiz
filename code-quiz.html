@@ -35,14 +35,20 @@
     </div>
 
 <!--Div that holds button of choices-->
-<div class="row" id="choices" stlye="display: none">
+<div class="row" id="choices" style="display: none; max-width: 50%;">
     <button id="choiceA"></button>
     <button id="choiceB"></button>
     <button id="choiceC"></button>
     <button id="choiceD"></button>
 </div>
 
-<p id="message"></p>
+<!--Tag that holds display message "you are correct" if user is correct-->
+<div class="row">
+    <p id="message"></p>
+</div>
+
+<!--Tag that displays timer-->
+<div class="row" id="quiz-time-left" style="display: none;"></div>
 
 <!--Container Closing tag-->
 </div>
