@@ -16,7 +16,7 @@
 * Step 5: Manipulating the DOM using JS to create overall functionality of the quiz. 
 
 
-## User Story: 
+## Usage: 
 
 The Code Quiz is a short questionnaire that is designed to test the knowledge of a beginning coder. When the user first opens the page they are presented with a short paragraph of directions. In addtion, the user can see the total time they have to complete the quiz  at the top left of the window.  As soon as the user clicks the start button they are presented with the first question and first set of choices. Once they chose option, a, b, c, or d the first question is replaced with the second, and so on and so forth. This loop continues until the quiz is finished. The quiz is declared over under two conditions, one being the time running out and the other being the user is completed with the questions. The page will then redirect the user to a screen where they can enter their initials and then view their score. The user will then be placed on a high scorers list that will rank them in accordance to other users who took the quiz. At that point, the quiz is complete. 
 
