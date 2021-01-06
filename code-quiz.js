@@ -69,6 +69,9 @@ function updateCountdown() {
   countdownEl.innerHTML = `${minutes}:${seconds}`;
   time--;
 
+  time--;
+  time = time < 0 ? 0 : time; 
+
   var wrongAnswer = questions[questionNumber].choices;
   if(userChoice === wrongAnswer){
     countdownEl--;
