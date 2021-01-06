@@ -30,4 +30,4 @@ The Code Quiz is a short questionnaire that is designed to test the knowledge of
 ## Credits: 
 * Link of youtube video: Simple Countdown Timer with Javascript - Day 21
 
-[![code-quiz](x7WJEmxNlEs&t)](https://www.youtube.com/watch?v=YOUTU...)
+[![https://github.com/sfinck/code-quiz](x7WJEmxNlEs&t)](https://www.youtube.com/watch?v=YOUTU...)
