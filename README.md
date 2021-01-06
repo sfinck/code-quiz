@@ -9,11 +9,11 @@
 * [Credits](#credits)
 
 ## Installation: 
-Step 1: Creating elements and designing HTML file using bootstrap (timer, choices, jumbotron, questions, directions, etc).  
-Step 2: Linking HTML, JS, CSS files together so they would work in unison.
-Step 3: Added elements to the HTML file to display correctly when opening the page. 
-Step 4: Grabbing elements from the HTML to use in the JS by using document.getElementById.
-Step 5: Manipulating the DOM using JS to create overall functionality of the quiz. 
+* Step 1: Creating elements and designing HTML file using bootstrap (timer, choices, jumbotron, questions, directions, etc).  
+* Step 2: Linking HTML, JS, CSS files together so they would work in unison.
+* Step 3: Added elements to the HTML file to display correctly when opening the page. 
+* Step 4: Grabbing elements from the HTML to use in the JS by using document.getElementById.
+* Step 5: Manipulating the DOM using JS to create overall functionality of the quiz. 
 
 
 ## User Story: 
