@@ -6,6 +6,7 @@ var choiceB = document.getElementById("choiceB")
 var choiceC = document.getElementById("choiceC")
 var choiceD = document.getElementById("choiceD")
 var messageElement = document.getElementById("message");
+var userScore = document.getElementById("userScore");
 
 
 //Created array of question objects 
@@ -63,10 +64,15 @@ function updateCountdown() {
   const minutes = Math.floor(time / 60);
   let seconds = time % 60;
 
-  seconds = seconds < 5 ? '0' + seconds : seconds;
+  seconds = seconds < 10 ? '0' + seconds : seconds;
 
   countdownEl.innerHTML = `${minutes}:${seconds}`;
   time--;
+
+  var wrongAnswer = questions[questionNumber].choices;
+  if(userChoice === wrongAnswer){
+    countdownEl--;
+  }
 }
 });
 
@@ -85,11 +91,15 @@ function checkAnswer(userChoice){
   var correctAnswer = questions[questionNumber].answer;
   if (userChoice === correctAnswer){
     score++;
-    // messageElement.innerHTML="You are correct!"
+  // messageElement.innerHTML="You are correct!"
   }
   else {
   //time decreases 
   }
+  //Display score at the end 
+  userScore.addEventListener("click", function () {
+    document.getAttribute("userScore").innerHTML = score;
+  });
   }
 
 choicesElement.addEventListener("click", function(event) {
@@ -109,5 +119,8 @@ choicesElement.addEventListener("click", function(event) {
   } else {
     choiceD.style.display = "none";
   }
+
+  
+
 }); 
 
