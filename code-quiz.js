@@ -6,7 +6,7 @@ var choiceB = document.getElementById("choiceB")
 var choiceC = document.getElementById("choiceC")
 var choiceD = document.getElementById("choiceD")
 var messageElement = document.getElementById("message");
-var userScore = document.getElementById("userScore");
+
 
 
 //Created array of question objects 
@@ -94,16 +94,11 @@ function checkAnswer(userChoice){
   var correctAnswer = questions[questionNumber].answer;
   if (userChoice === correctAnswer){
     score++;
-  // messageElement.innerHTML="You are correct!"
   }
   else {
   //time decreases 
   }
-  //Display score at the end 
-  userScore.addEventListener("click", function () {
-    document.getAttribute("userScore").innerHTML = score;
-  });
-  }
+  };
 
 choicesElement.addEventListener("click", function(event) {
   event.preventDefault();
@@ -123,7 +118,6 @@ choicesElement.addEventListener("click", function(event) {
     choiceD.style.display = "none";
   }
 
-  
 
 }); 
 
