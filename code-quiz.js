@@ -7,6 +7,7 @@ var choiceC = document.getElementById("choiceC")
 var choiceD = document.getElementById("choiceD")
 var messageElement = document.getElementById("message");
 
+
 //Created array of question objects 
 var questions = [ 
 //Question 1 
@@ -49,8 +50,27 @@ var questionNumber = 0;
 //Start Quiz
 startBtn.addEventListener("click", function() {
 genQuiz();
+
+//Timer 
+const startingMinutes = 5;
+let time = startingMinutes * 60;
+
+const countdownEl = document.getElementById("countdown");
+
+setInterval(updateCountdown, 1000);
+
+function updateCountdown() {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  seconds = seconds < 5 ? '0' + seconds : seconds;
+
+  countdownEl.innerHTML = `${minutes}:${seconds}`;
+  time--;
+}
 });
 
+//Generates quiz 
 function genQuiz(){
     choicesElement.style.display = "block";
     questionElement.innerText = questions[questionNumber].question;
@@ -65,10 +85,10 @@ function checkAnswer(userChoice){
   var correctAnswer = questions[questionNumber].answer;
   if (userChoice === correctAnswer){
     score++;
-    messageElement.innerText="You are correct!"
+    // messageElement.innerHTML="You are correct!"
   }
   else {
-    //insert timer here 
+  //time decreases 
   }
   }
 
