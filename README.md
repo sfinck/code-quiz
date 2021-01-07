@@ -1,12 +1,10 @@
-Code Quiz 
-
-## Description: 
+## Code Quiz 
 
 ## Table of Contents: 
-<!-- * [Installation](#installation)
+* [Installation](#installation)
 * [Usage](#usage)
 * [Features](#features)
-* [Credits](#credits) -->
+* [Credits](#credits)
 
 ## Installation: 
 * Step 1: Creating elements and designing HTML file using bootstrap (timer, choices, jumbotron, questions, directions, etc).  
