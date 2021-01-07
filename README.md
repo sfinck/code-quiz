@@ -1,4 +1,4 @@
-## Code Quiz 
+<!-- ## Code Quiz 
 
 ## Table of Contents: 
 * [Installation](#installation)
@@ -28,4 +28,4 @@ The Code Quiz is a short questionnaire that is designed to test the knowledge of
 ## Credits: 
 * Link of youtube video: Simple Countdown Timer with Javascript - Day 21
 
-(<iframe width="560" height="315" src="https://www.youtube.com/embed/x7WJEmxNlEs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>)
+(<iframe width="560" height="315" src="https://www.youtube.com/embed/x7WJEmxNlEs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>) -->
