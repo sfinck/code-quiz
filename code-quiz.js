@@ -1,3 +1,4 @@
+//Grabbing variables from HTML file 
 var startBtn = document.getElementById("startBtn");
 var questionElement = document.getElementById("questionLine");
 var choicesElement = document.getElementById("choices");
@@ -5,9 +6,10 @@ var choiceA = document.getElementById("choiceA")
 var choiceB = document.getElementById("choiceB")
 var choiceC = document.getElementById("choiceC")
 var choiceD = document.getElementById("choiceD")
-var messageElement = document.getElementById("message");
-
-
+var score = 0;
+var questionNumber = 0;
+var wrongAnswer = 0; 
+var finalScores = document.getElementById("finalScores")
 
 //Created array of question objects 
 var questions = [ 
@@ -42,11 +44,6 @@ answer: 0,
   answer: 1, 
 }
 ]
-
-//Global variable that tracks user score 
-var score = 0;
-//Global variable that tracks what question the user is on 
-var questionNumber = 0;
 
 //Start Quiz
 startBtn.addEventListener("click", function() {
@@ -96,7 +93,7 @@ function checkAnswer(userChoice){
     score++;
   }
   else {
-  //time decreases 
+   wrongAnswer++;
   }
   };
 
@@ -118,6 +115,9 @@ choicesElement.addEventListener("click", function(event) {
     choiceD.style.display = "none";
   }
 
+  score.addEventListener("click", function() {
+
+  
+  });
 
 }); 
-
