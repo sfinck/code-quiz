@@ -115,8 +115,9 @@ choicesElement.addEventListener("click", function(event) {
     choiceD.style.display = "none";
   }
 
+//Display final scores (enter initials)
   score.addEventListener("click", function() {
-
+    finalScores.style.display = "block"
   
   });
 
