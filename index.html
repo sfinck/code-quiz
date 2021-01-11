@@ -1,71 +1,86 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
-   <!--CSS Bootstrap link-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!--CSS Bootstrap link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <title>Code Quiz</title>
 </head>
 
 <body>
-<!--Reveals Final Score-->
+    <div class=row>
+        <div class=col-md-6>
+            <!--Tag that displays timer-->
+            <p id="countdown">1:00</p>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end">
+            <!--View high scores link-->
+            <button id="score">View High Scores</button>
+        </div>
+    </div>
 
-<div class="row" id="finalScores" style="display: none;">
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Enter Initials Here" aria-label="Enter Initials Here" aria-describedby="button-addon2">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Submit</button>
-      </div>      
-</div>
-
-
-<!--Tag that displays timer-->
-<p id="countdown">5:00</p>
-
-</div>
+    </div>
     <div class="container-fluid">
-    <!--Specific ID for container that will contain answers of questions-->
-    <div id="quizContainer">
-        <div class="jumbotron">
-            <div class ="col text-center">
-             <h1>Coding Quiz Challenge</h1>
-            <br>
-    <div class="card">
-     <div class="card-body" alignment="text-center">
-                Welcome to the Coding Quiz Challenge. Try to answer the questions to the best of your ability. The quiz will consist of a series of 5 questions. Once you are finished with your questions you will be presented with an overall score. You will then insert your initials and be placed on a 'High Scorers List' if your score meets the criteria. Good luck! 
+        <!--Specific ID for container that will contain answers of questions-->
+        <div id="quizContainer">
+            <div class="jumbotron">
+                <div class="col text-center">
+                    <h1>Coding Quiz Challenge</h1>
+                    <br>
+                    <div class="card">
+                        <div class="card-body" alignment="text-center">
+                            Welcome to the Coding Quiz Challenge. Try to answer the questions to the best of your
+                            ability. The quiz will consist of a series of 5 questions. Once you are finished with your
+                            questions you will be presented with an overall score. You will then insert your initials
+                            and be placed on a 'High Scorers List' if your score meets the criteria. Good luck!
+                        </div>
+                        <button type="button" class="btn btn-secondary btn-lg" button id="startBtn">Start Quiz</button>
+                    </div>
                 </div>
-    <button type="button" class="btn btn-secondary btn-lg" button id="startBtn">Start Quiz</button>  
-         </div>
-     </div>
-    </div>
- </div>
-</div>
-
-<!--Question line that shows question to the user-->
-<div class="row"> 
-    <div class="col text-center">
-         <h3 id="questionLine"></h3>
-    </div>
+            </div>
+        </div>
     </div>
 
-<!--Div that holds button of choices-->
-<div class="row" id="choices" style="display: none;">
-    <button id="choiceA"></button>
-    <button id="choiceB"></button>
-    <button id="choiceC"></button>
-    <button id="choiceD"></button>
-</div>
-</div>
+    <!--Question line that shows question to the user-->
+    <div class="row">
+        <div class="col text-center">
+            <h3 id="questionLine"></h3>
+        </div>
+    </div>
 
-<!--View high scores link-->
-<button id="score">View High Scores</button>
+    <!--Div that holds button of choices-->
+    <div class="row" id="choices" style="display: none;">
+        <button id="choiceA"></button>
+        <button id="choiceB"></button>
+        <button id="choiceC"></button>
+        <button id="choiceD"></button>
+    </div>
+    </div>
 
-<!--Container Closing tag-->
-</div>
+    <!--Reveals Final Score-->
+    <div class="row" id="finalScores" style="display: none;">
+        <div class="input-group mb-3">
+            <input type="text" id="input" class="form-control" placeholder="Enter Initials Here"
+                aria-label="Enter Initials Here" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Submit</button>
+        </div>
+    </div>
 
-  
-<!--JS Bootstrap link-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-<script src="./code-quiz.js"></script>
+    <div id="highScoresList">
+
+    </div>
+    <!--Container Closing tag-->
+    </div>
+
+
+    <!--JS Bootstrap link-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="./code-quiz.js"></script>
 </body>
+
 </html>
