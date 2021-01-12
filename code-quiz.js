@@ -12,7 +12,7 @@ var wrongAnswer = 0;
 var finalScores = document.getElementById("finalScores")
 var inputBox = document.getElementById("input");
 var initialsSubmit = document.getElementById("button-addon2");
-var highScores = document.getElementById("highScoresList");
+var highScores = document.createElement("highScoresList");
 
 //Created array of question objects 
 var questions = [
@@ -82,6 +82,7 @@ function genQuiz() {
 }
 
 function endQuiz() {
+  time = 1;
   clearInterval(timer);
   choicesElement.remove();
   questionElement.innerText = ` Your final score is: ${score}`
