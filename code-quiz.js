@@ -12,7 +12,7 @@ var wrongAnswer = 0;
 var finalScores = document.getElementById("finalScores")
 var inputBox = document.getElementById("input");
 var initialsSubmit = document.getElementById("button-addon2");
-var highScores = document.createElement("highScoresList");
+var highScores = document.getElementById("highScoresList");
 
 //Created array of question objects 
 var questions = [
@@ -63,7 +63,7 @@ startBtn.addEventListener("click", function () {
     if (time <= 0) {
       clearInterval(timer);
       choicesElement.remove();
-      questionElement.innerText = ` Your final score is: ${score}`
+      questionElement.innerText = `Your final score is: ${score}`
       finalScores.style.display = "block"
     }
   }
@@ -83,7 +83,6 @@ function genQuiz() {
 
 function endQuiz() {
   time = 1;
-  clearInterval(timer);
   choicesElement.remove();
   questionElement.innerText = ` Your final score is: ${score}`
   finalScores.style.display = "block"
@@ -91,7 +90,7 @@ function endQuiz() {
 
 function checkAnswer(userChoice) {
   var correctAnswer = questions[questionNumber].answer;
-  if (userChoice === correctAnswer) {
+  if (userChoice == correctAnswer) {
     score++;
   }
   else {
@@ -120,16 +119,12 @@ choicesElement.addEventListener("click", function (event) {
     endQuiz();
   }
 
-  //Display final scores (enter initials)
-  score.addEventListener("click", function () {
-    finalScores.style.display = "block"
-  });
-
-  initialsSubmit.addEventListener("click", function () {
-    finalScores.style.display = "none"
-    var userInitials = inputBox.value.trim
-    var highScore = document.createElement("h4")
-    highScore.innerText = `${userInitials} - ${score}`
-  });
-
 }); 
+
+initialsSubmit.addEventListener("click", function () {
+  finalScores.style.display = "none"
+  var userInitials = inputBox.value.trim();
+  var highScore = document.createElement("li")
+  highScore.innerText = `${userInitials} - ${score}`
+  highScores.appendChild(highScore);
+});
